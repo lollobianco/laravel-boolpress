@@ -36,7 +36,6 @@ export default {
           this.isLoading = true
           axios.get('http://localhost:8000/api/tags')
               .then((res) => {
-                  console.log(res.data);
 
                   this.tags = res.data;
                   console.log(this.tags);

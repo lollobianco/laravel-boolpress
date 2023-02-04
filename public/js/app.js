@@ -2084,6 +2084,7 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (err) {
         console.log(err);
       });
+      console.log(this.tag);
     }
   }
 });
@@ -2120,7 +2121,6 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
       this.isLoading = true;
       axios.get('http://localhost:8000/api/tags').then(function (res) {
-        console.log(res.data);
         _this.tags = res.data;
         console.log(_this.tags);
       })["catch"](function (err) {

@@ -34,8 +34,9 @@ export default {
                     console.log(res.data);
                     this.tag = res.data;
                 }).catch(err => {
-                    console.log(err)
+                    console.log(err);
                 })
+                console.log(this.tag)
         }
     }
 }
