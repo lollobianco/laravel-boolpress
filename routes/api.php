@@ -24,3 +24,10 @@ Route::namespace('api')->prefix('/posts')->group(function(){
     Route::get('/{id}', 'PostController@show');
 
 });
+
+Route::namespace('api')->prefix('/tags')->group(function(){
+    
+    Route::get('/', 'TagsController@index'); // -> Genera: localhost:8080/api/posts
+    Route::get('/{name}', 'PostController@show');
+
+});

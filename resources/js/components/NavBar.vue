@@ -13,6 +13,9 @@
                           <router-link class="nav-link" :to="{ name: 'posts' }">Lista Posts</router-link>
                       </li>
                       <li class="nav-item">
+                          <router-link class="nav-link" :to="{ name: 'tags' }">Type</router-link>
+                      </li>
+                      <li class="nav-item">
                           <router-link class="nav-link" :to="{ name: 'about-us' }">About us</router-link>
                       </li>
                       <li class="nav-item">
