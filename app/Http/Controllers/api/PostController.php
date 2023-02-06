@@ -5,6 +5,7 @@ namespace App\Http\Controllers\api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Tag;
 
 class PostController extends Controller
 {
@@ -18,7 +19,15 @@ class PostController extends Controller
         //$posts = Post::all();
         
         $posts = Post::With('category', 'tags')->paginate(5);
-        return response()->json($posts);
+        $tags = Tag::All();
+
+        // $data = [
+
+        //     'posts' => Post::With('category', 'tags')->paginate(5),
+        //     'tags' => Tag::All()
+        // ];
+
+        return response()->json(compact('posts', 'tags'));
 
     }
 

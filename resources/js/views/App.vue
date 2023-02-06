@@ -38,6 +38,12 @@ export default {
 
 <style>
 
-  
+@import 'https://fonts.googleapis.com/css2?family=Nunito&display=swap';
+/* @import 'variables'; */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+*{
+  font-family: 'Nunito', sans-serif;
+}
 
 </style>

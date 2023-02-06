@@ -28,6 +28,6 @@ Route::namespace('api')->prefix('/posts')->group(function(){
 Route::namespace('api')->prefix('/tags')->group(function(){
     
     Route::get('/', 'TagsController@index'); // -> Genera: localhost:8080/api/posts
-    Route::get('/{name}', 'PostController@show');
+    Route::get('/{name}', 'TagsController@show');
 
 });

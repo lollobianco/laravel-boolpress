@@ -37,9 +37,11 @@ class TagsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($name)
     {
         $tag = Tag::where('name','like', $name)->with('posts_table')->get();
+        // $post = Post::With('category', 'tags')->find($id);
+        // if(!$post) return response('Post non trovato', 404);
 
         return response()->json($tag);
     }
